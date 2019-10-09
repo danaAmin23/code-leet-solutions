@@ -23,16 +23,19 @@
             for (var i = 0; i <= nums.length-1; i++) {
                 for (var j = i+1; j <= length; j++) {
                     if(nums[i]+nums[j]===target){
-                        console.log([nums.indexOf(nums[i]),nums.indexOf(nums[j])]);
-                        return;
-                        }//end if    
+                        var index = [];
+                    
+                        index.push(i);
+                        index.push(j);
+                        return index;
+                            }//end if    
                 }//end j
             }//end for 
 
         };//end twoSum
 
         //args
-        nums = [2, 0, 0, 8, 8, 10, 9,2,2];
+        nums = [2,7,11,15];
         target = 9;
         twoSum(nums,target);
 
